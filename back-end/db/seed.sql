@@ -1,7 +1,7 @@
 \c records;
 
 
-INSERT INTO records (album, artist, year, condition, price, image) VALUES 
+INSERT INTO records (album_title, artist, year, condition, price, image) VALUES 
 ('The Dark Side of the Moon', 'Pink Floyd', 1973, 'Mint', 100, 'https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png'),
 ('All of this life', 'The Record Company', 2018, 'Used', 35,'https://upload.wikimedia.org/wikipedia/en/b/b6/All_of_This_Life.jpg'),
 ('Abraxas', 'Carlos Santana', 1970, 'Used', 50, 'https://upload.wikimedia.org/wikipedia/en/9/9d/Abraxas.jpg'),

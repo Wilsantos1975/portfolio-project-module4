@@ -2,10 +2,15 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const logger = require('morgan');
+const albumRoutes = require('./controllers/albumsController')
 
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
+
+
+app.use('/albums', albumRoutes);
+
 
 
 app.get('/', (req, res) => {

@@ -6,7 +6,7 @@ CREATE DATABASE records;
 
 CREATE TABLE records (
     id SERIAL PRIMARY KEY,
-    album TEXT NOT NULL,
+    album_title TEXT NOT NULL,
     artist TEXT NOT NULL,
     year INTEGER NOT NULL,
     condition TEXT NOT NULL,
