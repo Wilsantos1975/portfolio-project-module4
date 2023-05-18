@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-
+import bulma from "bulma/css/bulma.css";
 import Home from "./Pages/Home";
 
 import NavBar from "./Components/NavBar";
