@@ -24,15 +24,14 @@ function Albums() {
   }, []);
 
   return (
-    <div className="section">
-      <div className="container">
-        <div className="">
+    
+        <div className="section">
+          <div className="container">
           
           {albums.map((album) => {
             return <Album key={album.id} album={album} />;
           })}
         </div>
-      </div>
     </div>
   );
 }

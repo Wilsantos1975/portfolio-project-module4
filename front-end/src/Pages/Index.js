@@ -6,9 +6,11 @@ import Albums from '../Components/Albums'
 
 function Index() {
   return (
-    <div className='index'>
-        <Albums />
+    <div className='section'>
+      <div className='container'>
       
+        <Albums />
+      </div>
     </div>
   )
 }

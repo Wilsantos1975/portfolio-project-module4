@@ -3,3 +3,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+  align-items: center;
+}

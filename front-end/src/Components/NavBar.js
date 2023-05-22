@@ -11,12 +11,12 @@ function NavBar() {
     <nav className="navbar has-shadow is-spaced has-background-black column ">
       <div className="navbar-brand center">
         <h1>Vynil Libre</h1>
-        <a
+        <a href='#'
           role="button"
           class="navbar-burger"
           aria-label="menu"
           aria-expanded="false"
-          // data-target="navbarBasicExample"
+          data-target="navbarBasicExample"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
