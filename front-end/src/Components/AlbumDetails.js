@@ -26,44 +26,39 @@ function AlbumDetails() {
       <div className="container">
         <div className="columns">
           <div className="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-128x128">
+            <div className="card">
+              <div className="card-image">
+                <figure className="image is-128x128">
                   <img src={album.image} alt="Placeholder image" />
                 </figure>
               </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">{album.album_title}</p>
-                    <p class="subtitle is-6">
+              <div className="card-content">
+                <div className="media">
+                  <div className="media-content">
+                    <h1 className="title is-4">{album.album_title}</h1>
+                    <h2 className="subtitle is-6">
                       <strong>{album.artist}</strong>
-                    </p>
-                    <p class="subtitle is-6">
+                    </h2>
+                    <p className="subtitle is-6">
                       <strong>Release: </strong>
                       {album.year}
                     </p>
-                    <p class="subtitle is-6">
+                    <p className="subtitle is-6">
                       <strong>Condition:</strong>
                       {album.condition}
                     </p>
-                    <p class="subtitle is-6">
+                    <p className="subtitle is-6">
                       <strong>Price: $</strong>
                       {album.price}
                     </p>
                   </div>
                 </div>
-                <div class="card">
-                  <footer class="card-footer">
-                    <a href="#" class="card-footer-item">
-                      Save
-                    </a>
-                    <a href="#" class="card-footer-item">
-                      Edit
-                    </a>
-                    <a href="#" class="card-footer-item">
-                      Delete
-                    </a>
+                <div className="card">
+                  <footer className="card-footer">
+                   <Link to={`/albums`} className="button is-black">Back</Link>
+                   <Link to={`/albums/${album.id}/edit`} className="button is-black">Edit</Link>
+                   <button className="button is-black">Delete</button>
+
                   </footer>
                 </div>
               </div>

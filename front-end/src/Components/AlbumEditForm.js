@@ -52,25 +52,34 @@ function AlbumEditForm() {
   return (
     <div className="section">
       <div className="container">
-        <h1>Edit Album</h1>
+        <h1>Selling</h1>
+
         <form onSubmit={handleSubmit}>
-          <label htmlFor="album_title">Album Title</label>
-          <input
-            type="text"
-            name="album_title"
-            id="album_title"
-            value={album.album_title}
-            onChange={handleTextChange}
-          />
-          <label htmlFor="artist">Artist</label>
-          <input
-            type="text"
-            name="artist"
-            id="artist"
-            value={album.artist}
-            onChange={handleTextChange}
-          />
-          <label htmlFor="year">Year</label>
+          <div className="field">
+            <label htmlFor="album_title">Album Title </label>
+            <input
+              type="text"
+              name="album_title"
+              id="album_title"
+              value={album.album_title}
+              onChange={handleTextChange}
+            />
+          </div>
+
+          <div className="field">
+            <label htmlFor="artist">Artist </label>
+            <input
+              type="text"
+              name="artist"
+              id="artist"
+              value={album.artist}
+              onChange={handleTextChange}
+            />
+          </div>
+
+<div className="field">
+
+          <label htmlFor="year">Year </label>
           <input
             type="number"
             name="year"
@@ -78,7 +87,10 @@ function AlbumEditForm() {
             value={album.year}
             onChange={handleTextChange}
           />
-          <label htmlFor="condition">Condition</label>
+</div>
+
+<div className="field">
+          <label htmlFor="condition">Condition </label>
           <input
             type="text"
             name="condition"
@@ -86,7 +98,9 @@ function AlbumEditForm() {
             value={album.condition}
             onChange={handleTextChange}
           />
-          <label htmlFor="price">Price</label>
+</div>
+<div className="field">
+          <label htmlFor="price">Price </label>
           <input
             type="number"
             name="price"
@@ -94,7 +108,9 @@ function AlbumEditForm() {
             value={album.price}
             onChange={handleTextChange}
           />
-          <label htmlFor="image">Image</label>
+</div>
+<div className="field">
+          <label htmlFor="image">Image </label>
           <input
             type="text"
             name="image"
@@ -102,6 +118,7 @@ function AlbumEditForm() {
             value={album.image}
             onChange={handleTextChange}
           />
+</div>
           <button type="submit">Update Album</button>
           <Link to={`/albums/${id}`}>Cancel</Link>
         </form>
