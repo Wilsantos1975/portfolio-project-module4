@@ -2,57 +2,45 @@
 // Path: front-end/src/Components/Album.js
 // this file is used to display a single album and to update and delete albums from the database
 // it is imported into Albums.js
-import MoreIcon from '@mui/icons-material/More';
+import MoreIcon from "@mui/icons-material/More";
 import "../styles/styles.css";
 import { Link } from "react-router-dom";
+// import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import React from "react";
+import { Button, Card, CardGroup } from "react-bootstrap";
 
 function Album({ album }) {
-  return (
-    <div className="section">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-one-third">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-128x128">
-                  <img src={album.image} alt="Placeholder image" />
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">{album.album_title}</p>
-                    <p class="subtitle is-6">
-                      <strong>{album.artist}</strong>
-                    </p>
-                    <p class="subtitle is-6">
-                      <strong>Release: </strong>
-                      {album.year}
-                    </p>
-                    <p class="subtitle is-6">
-                      <strong>Condition:</strong>
-                      {album.condition}
-                    </p>
-                    <p class="subtitle is-6">
-                      <strong>Price: $</strong>
-                      {album.price}
-                    </p>
-                  </div>
-                </div>
+  let navigate = useNavigate();
 
-                <div>
-                  <Link to={`/albums/${album.id}`}><MoreIcon /> 
-            
-                  </Link>
-                </div>
-              </div>
-            </div>
+  const addToCart = () => {
+    navigate(`/cart`, { state: { albumId: album } });
+  };
+
+  return (
+    <CardGroup style={{ width: "200px" }}>
+      <Card className="mb-3">
+        <Card.Img variant="top" src={album.image} />
+        <Card.Body>
+          <Card.Title>{album.album_title}</Card.Title>
+          <Card.Text>{album.artist}</Card.Text>
+          <Card.Text>{album.year}</Card.Text>
+          <Card.Text>{album.condition}</Card.Text>
+          <Card.Text>{album.price}</Card.Text>
+
+          <div>
+            <Link to={`/albums/${album.id}`}>
+              <MoreIcon /> Click for details
+            </Link>
           </div>
-        </div>
-      </div>
-    </div>
+          <Button variant="primary" onClick={addToCart}>
+            Add to cart
+          </Button>
+        </Card.Body>
+      </Card>
+    </CardGroup>
+   
   );
 }
 
 export default Album;
-

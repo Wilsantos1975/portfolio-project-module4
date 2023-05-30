@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Cinzel+Decorative&family=Poppins:wght@400;500;700&display=swap");
+
+.App {
+ 
+  background:#3C486B
+}
 .center {
   display: flex;
   justify-content: center;
@@ -5,9 +11,65 @@
 }
 
 .albums {
+  background:#3C486B;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+ /* justify-content: center; */
+
+  
+}
+
+.intro {
+  font-family: "Bruno Ace SC";
+  font-size: xx-large;
+  color: white;
+}
+
+.navbar-right {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 50px;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-left {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.navbar-item {
+  margin-right: 10px;
+}
+
+.albums {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  padding: 50px;  
+  align-items: center;
+
+}
+.home {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.button {
+ 
+
+  padding: 10px 20px;
+
+  text-decoration: none;
+  display: inline-block;
+ 
 }

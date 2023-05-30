@@ -1,4 +1,5 @@
 import AlbumDetails from '../Components/AlbumDetails'
+import React from 'react'
 
 function ShowAlbum() {
   return (

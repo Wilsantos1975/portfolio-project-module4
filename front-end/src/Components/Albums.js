@@ -1,8 +1,9 @@
 // this file is used to display all the albums in the database and to create new albums
 // it is imported into App.js
-
+import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+
 
 import Album from "../Components/Album";
 
@@ -15,7 +16,6 @@ function Albums() {
     axios
       .get(`${API}/albums`)
       .then((res) => {
-        console.log(res.data);
         setAlbums(res.data);
       })
       .catch((err) => {
@@ -24,15 +24,13 @@ function Albums() {
   }, []);
 
   return (
-    
-        <div className="section">
-          <div className="container">
-          
-          {albums.map((album) => {
-            return <Album key={album.id} album={album} />;
-          })}
+  
+        <div className="albums">
+        {albums.map((album) => {
+          return <Album key={album.id} album={album} />;
+        })}
         </div>
-    </div>
+
   );
 }
 
