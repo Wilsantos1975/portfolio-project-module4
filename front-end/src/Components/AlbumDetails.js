@@ -2,9 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import MoreIcon from "@mui/icons-material/More";
+import { Card, Button } from "react-bootstrap";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -37,31 +35,28 @@ function AlbumDetails() {
   };
 
   return (
+    <Card className="mb-3" style={{ width: "20rem" }}>
+      <Card.Img variant="top" src={album.image} />
+      <Card.Body>
+        <Card.Title>{album.album_title}</Card.Title>
+        <Card.Text>{album.artist}</Card.Text>
+        <Card.Text>{album.year}</Card.Text>
+        <Card.Text>{album.condition}</Card.Text>
+        <Card.Text>{album.price}</Card.Text>
 
-
-<Card className="mb-3" style={{ width: "20rem" }}>
-  <Card.Img variant="top" src={album.image} />
-  <Card.Body>
-    <Card.Title>{album.album_title}</Card.Title>
-    <Card.Text>{album.artist}</Card.Text>
-    <Card.Text>{album.year}</Card.Text>
-    <Card.Text>{album.condition}</Card.Text>
-    <Card.Text>{album.price}</Card.Text>
-
-    <div>
-      <Link to={`/albums/${album.id}/edit`}>
-        <MoreIcon /> Edit
-      </Link>
-    </div>
-    <Button variant="primary" onClick={deleteAlbum}>Delete</Button>
-  </Card.Body>
-</Card>
-
-
-
-
-
-
+        <div>
+          <Link to={`/albums`}>
+            <Button>Back</Button>
+          </Link>
+          <Link to={`/albums/${album.id}/edit`}>
+            <Button>Edit</Button>
+          </Link>
+          <Button variant="primary" onClick={deleteAlbum}>
+            Delete
+          </Button>
+        </div>
+      </Card.Body>
+    </Card>
 
     // <div className="section">
     //   <div className="container">
@@ -116,8 +111,6 @@ function AlbumDetails() {
     //     </div>
     //   </div>
     // </div>
-
-    
   );
 }
 

@@ -10,14 +10,7 @@
   align-items: center;
 }
 
-.albums {
-  background:#3C486B;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
- /* justify-content: center; */
 
-  
-}
 
 .intro {
   font-family: "Bruno Ace SC";
@@ -49,6 +42,7 @@
 
 .albums {
   display: flex;
+ 
   width: 100%;
   flex-wrap: wrap;
   justify-content:space-between;

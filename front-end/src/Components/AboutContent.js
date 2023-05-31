@@ -14,7 +14,6 @@ function AboutContent() {
       <ul>
         <li>React.js: A popular JavaScript library for building user interfaces.</li>
         <li>Express.js: A web application framework for Node.js that simplifies the process of building APIs.</li>
-        <li>Bulma.io: A lightweight CSS framework that provides responsive and customizable styling.</li>
         <li>React-Bootstrap: A set of UI components for React that are built on top of Bootstrap, making it easier to design responsive web pages.</li>
         <li>Node.js: A JavaScript runtime environment that allows for server-side scripting and backend development.</li>
       </ul>
